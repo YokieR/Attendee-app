@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+      CLAY COMPONENT STYLES
+      Reusable widget styles following the Claymorphism design system.
+      All colors reference @color/ tokens — no hardcoded hex values.
+    ═══════════════════════════════════════════════════════════════
+    -->
+
+    <!-- ── Cards ────────────────────────────────────────────────────────── -->
+
+    <!-- Standard clay card: 22dp corners, 4dp elevation, clay surface fill -->
+    <style name="Widget.Clay.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/clay_surface</item>
+        <item name="strokeColor">@color/clay_outline</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- Stat card: elevated surface for metric display -->
+    <style name="Widget.Clay.StatCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">6dp</item>
+        <item name="cardBackgroundColor">@color/clay_surface</item>
+        <item name="strokeColor">@color/clay_outline</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- ── Buttons ───────────────────────────────────────────────────────── -->
+
+    <!-- Primary button: green fill, white text, 16dp corners, 48dp min height -->
+    <style name="Widget.Clay.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/clay_primary</item>
+        <item name="android:textColor">@color/clay_on_primary</item>
+        <item name="iconTint">@color/clay_on_primary</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Clay.Button</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="elevation">3dp</item>
+    </style>
+
+    <!-- Secondary button: surface variant fill, primary text, 16dp corners -->
+    <style name="Widget.Clay.Button.Secondary" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/clay_surface_variant</item>
+        <item name="android:textColor">@color/clay_primary</item>
+        <item name="iconTint">@color/clay_primary</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Clay.Button</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="elevation">2dp</item>
+    </style>
+
+    <!-- Danger button: error container fill, error text, 16dp corners -->
+    <style name="Widget.Clay.Button.Danger" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/clay_error_container</item>
+        <item name="android:textColor">@color/clay_error</item>
+        <item name="iconTint">@color/clay_error</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Clay.Button</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="elevation">2dp</item>
+    </style>
+
+    <!-- Text/ghost button: borderless, primary text color -->
+    <style name="Widget.Clay.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/clay_primary</item>
+        <item name="rippleColor">@color/clay_primary_container</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- ── Text Input ────────────────────────────────────────────────────── -->
+
+    <!-- Clay text input layout: outlined box with clay colors and 14dp corners -->
+    <style name="Widget.Clay.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxStrokeColor">@color/clay_outline</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="hintTextColor">@color/clay_on_surface_variant</item>
+        <item name="boxBackgroundColor">@color/clay_surface_variant</item>
+    </style>
+
+    <!-- Clay edit text: matches the TextInputLayout above -->
+    <style name="Widget.Clay.TextInputEditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/clay_on_surface</item>
+        <item name="android:textColorHint">@color/clay_on_surface_variant</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <!-- ── Bottom Navigation ─────────────────────────────────────────────── -->
+
+    <!-- Clay bottom nav: surface background, clay-tinted icons -->
+    <style name="Widget.Clay.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/clay_surface</item>
+        <item name="itemIconTint">@color/clay_bottom_nav_icon_color</item>
+        <item name="itemTextColor">@color/clay_bottom_nav_icon_color</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <!-- ── Toolbar ───────────────────────────────────────────────────────── -->
+
+    <!-- Clay toolbar: clean surface background, 0dp elevation (no drop shadow) -->
+    <style name="Widget.Clay.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/clay_surface</item>
+        <item name="elevation">0dp</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Clay.TitleLarge</item>
+        <item name="titleTextColor">@color/clay_on_surface</item>
+        <item name="navigationIconTint">@color/clay_on_surface</item>
+    </style>
+
+    <!-- ── Chips ─────────────────────────────────────────────────────────── -->
+
+    <!-- Clay chip: primary container fill, 20dp rounded corners -->
+    <style name="Widget.Clay.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/clay_primary_container</item>
+        <item name="android:textColor">@color/clay_primary</item>
+        <item name="chipStrokeColor">@color/clay_outline</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipCornerRadius">20dp</item>
+        <item name="chipMinHeight">32dp</item>
+    </style>
+
+    <!-- ── Progress ──────────────────────────────────────────────────────── -->
+
+    <!-- Clay circular progress: tinted with clay primary -->
+    <style name="Widget.Clay.ProgressBar" parent="Widget.Material3.CircularProgressIndicator">
+        <item name="indicatorColor">@color/clay_primary</item>
+        <item name="trackColor">@color/clay_primary_container</item>
+        <item name="trackThickness">4dp</item>
+    </style>
+
+</resources>

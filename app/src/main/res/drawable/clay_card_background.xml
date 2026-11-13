@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clay card background: simulates soft outer shadow with a bottom-layer
+  offset shape, then the actual white/surface fill on top.
+  Shadow layer uses #1F1A2E1A (~12% alpha dark green for depth).
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shadow layer: offset 3dp down, slightly wider for depth illusion -->
+    <item
+        android:top="3dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="22dp" />
+            <solid android:color="#1F1A2E1A" />
+        </shape>
+    </item>
+
+    <!-- Surface layer: main card fill -->
+    <item
+        android:top="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="22dp" />
+            <solid android:color="@color/clay_surface" />
+        </shape>
+    </item>
+
+</layer-list>

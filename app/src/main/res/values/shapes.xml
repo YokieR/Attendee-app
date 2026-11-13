@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+      CLAY SHAPE SYSTEM
+      All corner sizes follow the Claymorphism design language:
+      soft, rounded surfaces that feel tactile and elevated.
+    ═══════════════════════════════════════════════════════════════
+    -->
+
+    <!-- Small components: tags, badges, small chips -->
+    <style name="ShapeAppearance.Clay.Small" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <!-- Medium components: standard cards, dialogs -->
+    <style name="ShapeAppearance.Clay.Medium" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <!-- Large components: hero cards, feature panels -->
+    <style name="ShapeAppearance.Clay.Large" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerSize">26dp</item>
+    </style>
+
+    <!-- Extra-large components: bottom sheets, full overlays -->
+    <style name="ShapeAppearance.Clay.ExtraLarge" parent="ShapeAppearance.Material3.Corner.ExtraLarge">
+        <item name="cornerSize">32dp</item>
+    </style>
+
+    <!-- Circle / pill shape: avatars, FABs, circular indicators -->
+    <style name="ShapeAppearance.Clay.Circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Button shape: rounded pill-ish buttons -->
+    <style name="ShapeAppearance.Clay.Button" parent="">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Input field shape: soft rounded text fields -->
+    <style name="ShapeAppearance.Clay.Input" parent="">
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <!-- Card shape: standard content cards -->
+    <style name="ShapeAppearance.Clay.Card" parent="">
+        <item name="cornerSize">22dp</item>
+    </style>
+
+    <!-- Bottom sheet shape: rounded top corners only -->
+    <style name="ShapeAppearance.Clay.BottomSheet" parent="">
+        <item name="cornerSizeTopLeft">28dp</item>
+        <item name="cornerSizeTopRight">28dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+</resources>

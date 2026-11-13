@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- ── Claymorphic UI Design Tokens ─────────────────────────────────── -->
+    <color name="ClayBackground">#F4F6F8</color>
+    <color name="ClaySurface">#FFFFFF</color>
+    <color name="ClayShadow">#C4D0E3</color>
+    <color name="ClayPrimary">#1B4D3E</color>
+
+    <!-- ── Clay Color System (Light Mode) ───────────────────────────────── -->
+    <color name="clay_background">#F0F4F0</color>
+    <color name="clay_surface">#FFFFFF</color>
+    <color name="clay_surface_variant">#E8F0E8</color>
+    <color name="clay_primary">#2E7D32</color>
+    <color name="clay_primary_variant">#388E3C</color>
+    <color name="clay_primary_container">#C8E6C9</color>
+    <color name="clay_on_primary">#FFFFFF</color>
+    <color name="clay_secondary">#66BB6A</color>
+    <color name="clay_secondary_container">#E8F5E9</color>
+    <color name="clay_accent">#43A047</color>
+    <color name="clay_on_background">#1A2E1A</color>
+    <color name="clay_on_surface">#1A2E1A</color>
+    <color name="clay_on_surface_variant">#4A6741</color>
+    <color name="clay_outline">#B0C4B0</color>
+    <color name="clay_error">#C62828</color>
+    <color name="clay_error_container">#FFCDD2</color>
+    <color name="clay_success">#2E7D32</color>
+    <color name="clay_success_container">#C8E6C9</color>
+    <color name="clay_warning">#E65100</color>
+    <color name="clay_warning_container">#FFE0B2</color>
+
+    <!-- ── DeKUT Green (Primary Identity) ─────────────────────────────── -->
+    <color name="BrandPrimary">#006400</color>
+    <color name="BrandPrimaryDark">#004D00</color>
+    <color name="BrandPrimaryDeep">#003300</color>
+    <color name="BrandPrimaryLight">#228B22</color>
+    <color name="BrandPrimaryContainer">#E8F5E9</color>
+
+    <color name="BrandSecondary">#004D00</color>
+    <color name="BrandSecondaryDark">#003300</color>
+    <color name="BrandSecondaryContainer">#C8E6C9</color>
+
+    <!-- ── DeKUT Gold (Accent — Attention & Priority) ──────────────────── -->
+    <color name="BrandAccent">#FFD700</color>
+    <color name="BrandAccentMid">#D4A017</color>
+    <color name="BrandAccentDark">#B8860B</color>
+    <color name="BrandAccentContainer">#FFF8DC</color>
+
+    <!-- ── DeKUT Red (Alert — Danger & Error Only) ────────────────────── -->
+    <color name="BrandDanger">#B71C1C</color>
+    <color name="BrandDangerMid">#C62828</color>
+    <color name="BrandDangerContainer">#FFEBEE</color>
+
+    <!-- ── Semantic Status Colors ─────────────────────────────────────── -->
+    <color name="StatusPresent">#006400</color>
+    <color name="StatusPresentLight">#228B22</color>
+    <color name="StatusPresentContainer">#E8F5E9</color>
+    <color name="SuccessEmerald">#006400</color>
+    <color name="Success">#006400</color>
+    <color name="SuccessContainer">#E8F5E9</color>
+
+    <color name="StatusActive">#D4A017</color>
+    <color name="StatusActiveContainer">#FFF8DC</color>
+    <color name="Warning">#D4A017</color>
+    <color name="WarningAmber">#B8860B</color>
+    <color name="WarningContainer">#FFF8DC</color>
+
+    <color name="StatusAbsent">#B71C1C</color>
+    <color name="StatusAbsentContainer">#FFEBEE</color>
+    <color name="Error">#B71C1C</color>
+    <color name="ErrorRose">#B71C1C</color>
+    <color name="ErrorDark">#7F0000</color>
+    <color name="ErrorContainer">#FFEBEE</color>
+
+    <!-- ── Surface / Background ───────────────────────────────────────── -->
+    <color name="BgMain">#F4F6F8</color>
+    <color name="BgSurface">#FFFFFF</color>
+    <color name="BgInput">#FFFFFF</color>
+    <color name="BgSurfaceElevated">#FFFFFF</color>
+
+    <!-- ── Typography ─────────────────────────────────────────────────── -->
+    <color name="TextTitle">#111827</color>
+    <color name="TextBody">#1F2937</color>
+    <color name="TextSecondary">#4B5563</color>
+    <color name="TextTertiary">#6B7280</color>
+    <color name="TextMuted">#9CA3AF</color>
+    <color name="TextOnPrimary">#FFFFFF</color>
+    <color name="TextOnGold">#003300</color>
+    <color name="TextOnDanger">#FFFFFF</color>
+    <color name="TextPrimary">#111827</color>
+
+    <!-- ── Borders & Dividers ─────────────────────────────────────────── -->
+    <color name="BorderLight">#C4D0E3</color>
+    <color name="BorderFocus">#1B4D3E</color>
+    <color name="Divider">#C4D0E3</color>
+    <color name="DividerGold">#FFD700</color>
+
+    <color name="Info">#006400</color>
+    <color name="InfoContainer">#E8F5E9</color>
+    <color name="InfoIndigo">#004D00</color>
+
+    <color name="NavyPrimary">#006400</color>
+    <color name="NavyDark">#004D00</color>
+    <color name="NavyLight">#228B22</color>
+    <color name="TealPrimary">#006400</color>
+    <color name="TealLight">#E8F5E9</color>
+    <color name="AttendanceRed">#B71C1C</color>
+    <color name="AttendanceAmber">#D4A017</color>
+    <color name="Emerald">#006400</color>
+    <color name="EmeraldLight">#E8F5E9</color>
+    <color name="dashboard_background">#F4F6F8</color>
+    <color name="card_surface">#FFFFFF</color>
+    <color name="telemetry_header_text">#111827</color>
+    <color name="telemetry_body_text">#4B5563</color>
+    <color name="telemetry_caption_text">#B8860B</color>
+    <color name="DarkGreyBg">#F4F6F8</color>
+</resources>

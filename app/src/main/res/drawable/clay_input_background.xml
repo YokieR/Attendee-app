@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clay input field background: soft surface_variant fill with rounded
+  corners and a subtle 1dp inset stroke border.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Stroke border layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="14dp" />
+            <solid android:color="@color/clay_outline" />
+        </shape>
+    </item>
+
+    <!-- Fill layer inset by 1dp to create visible border -->
+    <item
+        android:top="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="13dp" />
+            <solid android:color="@color/clay_surface_variant" />
+        </shape>
+    </item>
+
+</layer-list>

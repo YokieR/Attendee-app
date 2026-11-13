@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clay secondary button: soft surface variant fill with 16dp corners.
+  Pressed state uses slightly darker surface.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressed state: slightly darker surface -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#D4E8D4" />
+        </shape>
+    </item>
+
+    <!-- Default state: surface_variant fill -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="@color/clay_surface_variant" />
+        </shape>
+    </item>
+
+</selector>

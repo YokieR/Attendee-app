@@ -1,0 +1,327 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+    ═══════════════════════════════════════════════════════
+      DEDAN KIMATHI UNIVERSITY — ATTENDEE THEME
+      Material3 DayNight → DeKUT Identity Colors
+    ═══════════════════════════════════════════════════════
+    -->
+
+    <style name="Base.Theme.Attendee3" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- ── Typography (Delegates to native user device font) ────── -->
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+        <!-- ── Core Material3 Color Roles ───────────────────────────── -->
+        <item name="colorPrimary">@color/BrandPrimary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/BrandPrimaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/BrandPrimaryDeep</item>
+
+        <item name="colorSecondary">@color/BrandAccentMid</item>
+        <item name="colorOnSecondary">@color/BrandPrimaryDeep</item>
+        <item name="colorSecondaryContainer">@color/BrandAccentContainer</item>
+        <item name="colorOnSecondaryContainer">@color/BrandAccentDark</item>
+
+        <!-- Gold as Tertiary (attention-grabbing accent) -->
+        <item name="colorTertiary">@color/BrandAccent</item>
+        <item name="colorOnTertiary">@color/BrandPrimaryDeep</item>
+        <item name="colorTertiaryContainer">@color/BrandAccentContainer</item>
+        <item name="colorOnTertiaryContainer">@color/BrandAccentDark</item>
+
+        <!-- Red for Errors and Danger -->
+        <item name="colorError">@color/BrandDanger</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">@color/BrandDangerContainer</item>
+        <item name="colorOnErrorContainer">@color/ErrorDark</item>
+
+        <!-- ── Background & Surface (White-first) ───────────────────── -->
+        <item name="android:windowBackground">@color/BgMain</item>
+        <item name="colorSurface">@color/BgSurface</item>
+        <item name="colorOnSurface">@color/TextTitle</item>
+        <item name="colorSurfaceVariant">@color/BgInput</item>
+        <item name="colorOnSurfaceVariant">@color/TextBody</item>
+        <item name="colorOutline">@color/BorderLight</item>
+        <item name="colorOutlineVariant">@color/Divider</item>
+
+        <!-- ── System Chrome ────────────────────────────────────────── -->
+        <item name="android:statusBarColor">@color/BrandPrimaryDeep</item>
+        <item name="android:navigationBarColor">@color/BrandPrimaryDeep</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+
+        <!-- ── Custom attribute used in auth screens ────────────────── -->
+        <item name="authScreenBackground">@color/BgSurface</item>
+    </style>
+
+    <attr name="authScreenBackground" format="reference|color" />
+
+    <style name="Theme.Attendee3" parent="Base.Theme.Attendee3" />
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+      CLAY THEME — Claymorphism Design System
+      Maps clay color tokens to Material3 theme attributes.
+      Inherits from Material3 DayNight so dark mode is handled
+      via values-night/themes.xml overrides.
+    ═══════════════════════════════════════════════════════════════
+    -->
+    <style name="Base.Theme.Clay" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Typography: Inter via downloadable font, falls back to sans-serif -->
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+
+        <!-- Primary color roles -->
+        <item name="colorPrimary">@color/clay_primary</item>
+        <item name="colorOnPrimary">@color/clay_on_primary</item>
+        <item name="colorPrimaryContainer">@color/clay_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/clay_on_background</item>
+
+        <!-- Secondary color roles -->
+        <item name="colorSecondary">@color/clay_secondary</item>
+        <item name="colorOnSecondary">@color/clay_on_primary</item>
+        <item name="colorSecondaryContainer">@color/clay_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/clay_on_background</item>
+
+        <!-- Tertiary maps to accent -->
+        <item name="colorTertiary">@color/clay_accent</item>
+        <item name="colorOnTertiary">@color/clay_on_primary</item>
+        <item name="colorTertiaryContainer">@color/clay_primary_container</item>
+        <item name="colorOnTertiaryContainer">@color/clay_on_background</item>
+
+        <!-- Error color roles -->
+        <item name="colorError">@color/clay_error</item>
+        <item name="colorOnError">@color/clay_surface</item>
+        <item name="colorErrorContainer">@color/clay_error_container</item>
+        <item name="colorOnErrorContainer">@color/clay_error</item>
+
+        <!-- Background and surface -->
+        <item name="android:colorBackground">@color/clay_background</item>
+        <item name="android:windowBackground">@color/clay_background</item>
+        <item name="colorOnBackground">@color/clay_on_background</item>
+        <item name="colorSurface">@color/clay_surface</item>
+        <item name="colorOnSurface">@color/clay_on_surface</item>
+        <item name="colorSurfaceVariant">@color/clay_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/clay_on_surface_variant</item>
+        <item name="colorOutline">@color/clay_outline</item>
+        <item name="colorOutlineVariant">@color/clay_outline</item>
+
+        <!-- System chrome -->
+        <item name="android:statusBarColor">@color/clay_background</item>
+        <item name="android:navigationBarColor">@color/clay_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+
+        <!-- Shape overrides using clay system -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Clay.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Clay.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Clay.Large</item>
+
+        <!-- Custom attribute for auth screens -->
+        <item name="authScreenBackground">@color/clay_surface</item>
+    </style>
+
+    <style name="Theme.Clay" parent="Base.Theme.Clay" />
+
+    <!-- Instant Launch Splash Theme (Eliminates White Screen) -->
+    <style name="Theme.Attendee3.SplashWindow" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash_branding</item>
+        <item name="android:statusBarColor">@color/BrandPrimaryDeep</item>
+        <item name="android:navigationBarColor">@color/BrandPrimaryDeep</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!--  COMPONENT STYLES                                              -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+
+    <!-- ── Cards ────────────────────────────────────────────────────── -->
+    <style name="Attendee.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/BgSurface</item>
+        <item name="strokeColor">@color/BorderLight</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Attendee.Card.Large" parent="Attendee.Card">
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <!-- ── Buttons ──────────────────────────────────────────────────── -->
+
+    <!-- Primary: DeKUT Green — main actions (check-in, save, confirm) -->
+    <style name="Attendee.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/BrandPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+        <item name="shapeAppearanceOverlay">@style/Attendee.Shape.Button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <!-- Gold: DeKUT Gold — high-attention actions (start session, export) -->
+    <style name="Attendee.Button.Gold" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/BrandAccent</item>
+        <item name="android:textColor">@color/BrandPrimaryDeep</item>
+        <item name="iconTint">@color/BrandPrimaryDeep</item>
+        <item name="shapeAppearanceOverlay">@style/Attendee.Shape.Button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <!-- Danger: DeKUT Red — destructive actions only (delete, reject) -->
+    <style name="Attendee.Button.Danger" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/BrandDanger</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+        <item name="shapeAppearanceOverlay">@style/Attendee.Shape.Button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <!-- Outlined Green — secondary actions -->
+    <style name="Attendee.Button.OutlinedGreen" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/BrandPrimary</item>
+        <item name="android:textColor">@color/BrandPrimary</item>
+        <item name="shapeAppearanceOverlay">@style/Attendee.Shape.Button</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Outlined Gold — tertiary actions -->
+    <style name="Attendee.Button.OutlinedGold" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/BrandAccent</item>
+        <item name="android:textColor">@color/BrandAccentDark</item>
+        <item name="shapeAppearanceOverlay">@style/Attendee.Shape.Button</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Text button (ghost) -->
+    <style name="Attendee.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/BrandPrimary</item>
+        <item name="rippleColor">@color/BrandPrimaryContainer</item>
+    </style>
+
+    <!-- ── FAB ───────────────────────────────────────────────────────── -->
+    <style name="Attendee.FAB.Primary" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/BrandPrimary</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="Attendee.FAB.Gold" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/BrandAccent</item>
+        <item name="tint">@color/BrandPrimaryDeep</item>
+    </style>
+
+    <!-- ── Shapes ────────────────────────────────────────────────────── -->
+    <style name="Attendee.Shape.Button" parent="">
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <style name="Attendee.Shape.Card" parent="">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="CircleImageView" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- ── Text Input (OutlinedBox with green focus) ─────────────────── -->
+    <style name="Attendee.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/il_color_state_green</item>
+        <item name="hintTextColor">@color/BrandPrimary</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+    </style>
+
+    <!-- ── Chips ─────────────────────────────────────────────────────── -->
+    <style name="Attendee.Chip.Green" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/BrandPrimaryContainer</item>
+        <item name="android:textColor">@color/BrandPrimary</item>
+        <item name="chipStrokeColor">@color/BrandPrimary</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="Attendee.Chip.Gold" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/BrandAccentContainer</item>
+        <item name="android:textColor">@color/BrandAccentDark</item>
+        <item name="chipStrokeColor">@color/BrandAccent</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="Attendee.Chip.Red" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/BrandDangerContainer</item>
+        <item name="android:textColor">@color/BrandDanger</item>
+        <item name="chipStrokeColor">@color/BrandDanger</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <!-- ── OTP Input Box ─────────────────────────────────────────────── -->
+    <style name="OtpBox">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@drawable/bg_otp_box</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/BrandPrimaryDeep</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+
+    <!-- ── Toolbar (DeKUT dark green + gold underline) ───────────────── -->
+    <style name="Attendee.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/BrandPrimaryDeep</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="subtitleTextColor">@color/BrandAccentContainer</item>
+        <item name="navigationIconTint">@color/BrandAccent</item>
+    </style>
+
+    <!-- ── Bottom Nav ────────────────────────────────────────────────── -->
+    <style name="Attendee.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/BgSurface</item>
+        <item name="itemIconTint">@color/bnv_icon_color</item>
+        <item name="itemTextColor">@color/bnv_icon_color</item>
+    </style>
+
+    <!-- ── NavigationView (Drawer) ──────────────────────────────────── -->
+    <style name="Attendee.NavigationView" parent="Widget.Material3.NavigationView">
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="itemBackground">@drawable/nav_item_background</item>
+    </style>
+
+    <!-- ── Dialogs ───────────────────────────────────────────────────── -->
+    <style name="Attendee.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/BrandPrimary</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Attendee.Button.Primary</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Attendee.Button.Text</item>
+    </style>
+
+    <!-- ── Snackbar ──────────────────────────────────────────────────── -->
+    <style name="Attendee.Snackbar" parent="Widget.Material3.Snackbar">
+        <item name="android:background">@color/BrandPrimaryDeep</item>
+        <item name="actionTextColorAlpha">1</item>
+    </style>
+
+</resources>

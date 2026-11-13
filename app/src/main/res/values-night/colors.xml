@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ═══════════════════════════════════════════════════════════════
+  DEDAN KIMATHI UNIVERSITY — HIGH-CONTRAST ELEGANT DARK MODE PALETTE
+  Designed for maximum readability, elevation depth, and visual appeal.
+  ═══════════════════════════════════════════════════════════════
+-->
+<resources>
+
+    <!-- ── Luminous Brand Green (Vibrant, high-contrast Emerald on Dark) ── -->
+    <color name="BrandPrimary">#2ECC71</color>          <!-- Vivid Emerald Green — pops on dark -->
+    <color name="BrandPrimaryDark">#1E8449</color>      <!-- Forest Green — status bar & app bar -->
+    <color name="BrandPrimaryDeep">#145A32</color>      <!-- Deep Forest Green -->
+    <color name="BrandPrimaryLight">#58D68D</color>     <!-- Light Mint Green — icons, highlights -->
+    <color name="BrandPrimaryContainer">#1B3A2B</color> <!-- Rich Dark Mint Container -->
+
+    <color name="BrandSecondary">#1E8449</color>
+    <color name="BrandSecondaryDark">#145A32</color>
+    <color name="BrandSecondaryContainer">#1B3A2B</color>
+
+    <!-- ── Luminous Gold Accent ─────────────────────────────────── -->
+    <color name="BrandAccent">#FFD700</color>           <!-- Rich Golden Yellow -->
+    <color name="BrandAccentMid">#FFC107</color>        <!-- Amber Gold -->
+    <color name="BrandAccentDark">#FFD700</color>
+    <color name="BrandAccentContainer">#3D3200</color>  <!-- Warm Gold Tint Container -->
+
+    <!-- ── Luminous Red Alert ───────────────────────────────────── -->
+    <color name="BrandDanger">#FF5252</color>           <!-- Luminous Coral Red -->
+    <color name="BrandDangerMid">#E53935</color>
+    <color name="BrandDangerContainer">#3E1818</color>  <!-- Soft Crimson Container -->
+    <color name="ErrorRose">#FF5252</color>
+    <color name="Error">#FF5252</color>
+    <color name="ErrorDark">#FF8A80</color>
+    <color name="ErrorContainer">#3E1818</color>
+
+    <!-- ── Refined Dark Surface Hierarchy (Deep & Layered) ─────── -->
+    <color name="BgMain">#121614</color>                <!-- Comfortable Dark Slate Canvas -->
+    <color name="BgSurface">#1E2723</color>             <!-- Distinctly Elevated Card Surface -->
+    <color name="BgSurfaceElevated">#26332E</color>     <!-- Higher Elevation Dialogs / Sheets -->
+    <color name="BgInput">#222E28</color>               <!-- Input Field Background -->
+    <color name="card_surface">#1E2723</color>
+    <color name="dashboard_background">#121614</color>
+
+    <!-- ── High-Contrast Typography Hierarchy (WCAG AAA Compliant) ── -->
+    <color name="TextTitle">#FFFFFF</color>             <!-- Crisp Pure White Headings -->
+    <color name="TextBody">#F3F4F6</color>              <!-- High-Legibility Light Body Text -->
+    <color name="TextSecondary">#D1D5DB</color>         <!-- Readable Light Grey Secondary Text -->
+    <color name="TextTertiary">#9CA3AF</color>          <!-- Soft Grey Subtitles -->
+    <color name="TextMuted">#9CA3AF</color>             <!-- Muted Helper Labels -->
+    <color name="TextOnPrimary">#FFFFFF</color>
+    <color name="TextOnGold">#003300</color>
+    <color name="TextOnDanger">#FFFFFF</color>
+    <color name="TextPrimary">#FFFFFF</color>
+    <color name="telemetry_header_text">#FFFFFF</color>
+    <color name="telemetry_body_text">#F3F4F6</color>
+    <color name="telemetry_caption_text">#FFD700</color>
+
+    <!-- ── Visible Surface Borders & Dividers ───────────────────── -->
+    <color name="BorderLight">#364841</color>           <!-- Crisp Subtle Card Stroke -->
+    <color name="BorderFocus">#2ECC71</color>           <!-- Luminous Active Border -->
+    <color name="Divider">#283630</color>               <!-- Dividers -->
+
+    <!-- ── Status Colors ────────────────────────────────────────── -->
+    <color name="SuccessEmerald">#2ECC71</color>
+    <color name="Success">#2ECC71</color>
+    <color name="SuccessContainer">#1B3A2B</color>
+    <color name="StatusPresent">#2ECC71</color>
+    <color name="StatusPresentLight">#58D68D</color>
+    <color name="StatusPresentContainer">#1B3A2B</color>
+
+    <color name="Warning">#FFD700</color>
+    <color name="WarningAmber">#FFC107</color>
+    <color name="WarningContainer">#3D3200</color>
+    <color name="StatusActive">#FFD700</color>
+    <color name="StatusActiveContainer">#3D3200</color>
+
+    <color name="StatusAbsent">#FF5252</color>
+    <color name="StatusAbsentContainer">#3E1818</color>
+    <color name="AttendanceRed">#FF5252</color>
+    <color name="AttendanceAmber">#FFD700</color>
+
+    <!-- ── Info ────────────────────────────────────────────────── -->
+    <color name="Info">#2ECC71</color>
+    <color name="InfoContainer">#1B3A2B</color>
+
+    <!-- ── Legacy Mappings ─────────────────────────────────────── -->
+    <color name="NavyPrimary">#2ECC71</color>
+    <color name="NavyDark">#1E8449</color>
+    <color name="NavyLight">#58D68D</color>
+    <color name="TealPrimary">#2ECC71</color>
+    <color name="TealLight">#1B3A2B</color>
+    <color name="Emerald">#2ECC71</color>
+    <color name="EmeraldLight">#1B3A2B</color>
+    <color name="DarkGreyBg">#121614</color>
+
+    <!-- ── Clay Color System (Dark Mode) ───────────────────────────────── -->
+    <color name="clay_background">#0F1A0F</color>
+    <color name="clay_surface">#1A2E1A</color>
+    <color name="clay_surface_variant">#243324</color>
+    <color name="clay_primary">#66BB6A</color>
+    <color name="clay_primary_variant">#81C784</color>
+    <color name="clay_primary_container">#2E7D32</color>
+    <color name="clay_on_primary">#003300</color>
+    <color name="clay_secondary">#A5D6A7</color>
+    <color name="clay_secondary_container">#2E7D32</color>
+    <color name="clay_accent">#81C784</color>
+    <color name="clay_on_background">#E8F5E9</color>
+    <color name="clay_on_surface">#E8F5E9</color>
+    <color name="clay_on_surface_variant">#A5C8A5</color>
+    <color name="clay_outline">#4A6741</color>
+    <color name="clay_error">#EF9A9A</color>
+    <color name="clay_error_container">#C62828</color>
+    <color name="clay_success">#A5D6A7</color>
+    <color name="clay_success_container">#1B5E20</color>
+    <color name="clay_warning">#FFCC80</color>
+    <color name="clay_warning_container">#E65100</color>
+</resources>

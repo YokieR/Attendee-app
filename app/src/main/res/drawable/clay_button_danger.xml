@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Clay danger button: soft error_container fill with 16dp corners.
+  Pressed state uses slightly darker red tint.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressed state: deeper red container -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#EF9A9A" />
+        </shape>
+    </item>
+
+    <!-- Default state: soft error container fill -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="@color/clay_error_container" />
+        </shape>
+    </item>
+
+</selector>

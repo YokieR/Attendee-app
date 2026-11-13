@@ -1,0 +1,131 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    DEDAN KIMATHI UNIVERSITY — DARK THEME
+    Overrides Base.Theme.Attendee3 for night/dark mode.
+    All surface/text roles are remapped so nothing disappears
+    into the dark background.
+    ═══════════════════════════════════════════════════════════════
+    -->
+    <style name="Base.Theme.Attendee3" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- ── Typography (Delegates to native user device font) ────── -->
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+        <!-- ── Brand colours (brighter on dark) ───────────────────── -->
+        <item name="colorPrimary">@color/BrandPrimary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/BrandPrimaryContainer</item>
+        <item name="colorOnPrimaryContainer">#A5D6A7</item>  <!-- Green 200 — readable on dark container -->
+
+        <item name="colorSecondary">@color/BrandAccentMid</item>
+        <item name="colorOnSecondary">@color/BrandPrimaryDeep</item>
+        <item name="colorSecondaryContainer">@color/BrandAccentContainer</item>
+        <item name="colorOnSecondaryContainer">@color/BrandAccent</item>
+
+        <item name="colorTertiary">@color/BrandAccent</item>
+        <item name="colorOnTertiary">@color/BrandPrimaryDeep</item>
+        <item name="colorTertiaryContainer">@color/BrandAccentContainer</item>
+        <item name="colorOnTertiaryContainer">@color/BrandAccent</item>
+
+        <!-- ── Error / danger ──────────────────────────────────────── -->
+        <item name="colorError">@color/BrandDanger</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">@color/BrandDangerContainer</item>
+        <item name="colorOnErrorContainer">#FFCDD2</item>  <!-- Red 100 — legible on dark red container -->
+
+        <!-- ── Backgrounds & surfaces ──────────────────────────────── -->
+        <item name="android:windowBackground">@color/BgMain</item>
+        <item name="colorSurface">@color/BgSurface</item>
+        <item name="colorOnSurface">@color/TextTitle</item>        <!-- Near-white text on dark cards -->
+        <item name="colorSurfaceVariant">@color/BgInput</item>
+        <item name="colorOnSurfaceVariant">@color/TextBody</item>  <!-- Light grey text on inputs -->
+        <item name="colorOutline">@color/BorderLight</item>
+        <item name="colorOutlineVariant">@color/Divider</item>
+
+        <!-- ── System chrome ───────────────────────────────────────── -->
+        <item name="android:statusBarColor">@color/BrandPrimaryDeep</item>
+        <item name="android:navigationBarColor">@color/BgMain</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+
+        <!-- ── Custom auth screen background ──────────────────────── -->
+        <item name="authScreenBackground">@color/BgSurface</item>
+    </style>
+
+    <!-- Instant Launch Splash Theme (Eliminates White Screen) -->
+    <style name="Theme.Attendee3.SplashWindow" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash_branding</item>
+        <item name="android:statusBarColor">@color/BrandPrimaryDeep</item>
+        <item name="android:navigationBarColor">@color/BrandPrimaryDeep</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+      CLAY DARK THEME OVERRIDES
+      Remaps clay color tokens to dark-mode palette for night mode.
+      All surface/text roles use the dark clay palette so elements
+      remain readable and retain the Claymorphism visual language.
+    ═══════════════════════════════════════════════════════════════
+    -->
+    <style name="Base.Theme.Clay" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Typography: Inter via downloadable font -->
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+
+        <!-- Primary color roles (dark palette) -->
+        <item name="colorPrimary">@color/clay_primary</item>
+        <item name="colorOnPrimary">@color/clay_on_primary</item>
+        <item name="colorPrimaryContainer">@color/clay_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/clay_on_background</item>
+
+        <!-- Secondary color roles (dark palette) -->
+        <item name="colorSecondary">@color/clay_secondary</item>
+        <item name="colorOnSecondary">@color/clay_on_primary</item>
+        <item name="colorSecondaryContainer">@color/clay_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/clay_on_background</item>
+
+        <!-- Tertiary maps to accent (dark palette) -->
+        <item name="colorTertiary">@color/clay_accent</item>
+        <item name="colorOnTertiary">@color/clay_on_primary</item>
+        <item name="colorTertiaryContainer">@color/clay_primary_container</item>
+        <item name="colorOnTertiaryContainer">@color/clay_on_background</item>
+
+        <!-- Error color roles (dark palette) -->
+        <item name="colorError">@color/clay_error</item>
+        <item name="colorOnError">@color/clay_surface</item>
+        <item name="colorErrorContainer">@color/clay_error_container</item>
+        <item name="colorOnErrorContainer">@color/clay_on_background</item>
+
+        <!-- Background and surface (dark palette) -->
+        <item name="android:colorBackground">@color/clay_background</item>
+        <item name="android:windowBackground">@color/clay_background</item>
+        <item name="colorOnBackground">@color/clay_on_background</item>
+        <item name="colorSurface">@color/clay_surface</item>
+        <item name="colorOnSurface">@color/clay_on_surface</item>
+        <item name="colorSurfaceVariant">@color/clay_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/clay_on_surface_variant</item>
+        <item name="colorOutline">@color/clay_outline</item>
+        <item name="colorOutlineVariant">@color/clay_outline</item>
+
+        <!-- System chrome (dark backgrounds) -->
+        <item name="android:statusBarColor">@color/clay_background</item>
+        <item name="android:navigationBarColor">@color/clay_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+
+        <!-- Shape overrides using clay system -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Clay.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Clay.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Clay.Large</item>
+
+        <!-- Custom attribute for auth screens -->
+        <item name="authScreenBackground">@color/clay_surface</item>
+    </style>
+
+    <style name="Theme.Clay" parent="Base.Theme.Clay" />
+
+</resources>
