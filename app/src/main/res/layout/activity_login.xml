@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clay_background"
+    tools:context=".ui.auth.LoginActivity">
+
+    <!-- ── Green Gradient Header Section ── -->
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@drawable/bg_auth_gradient"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_dekut_logo"
+            android:contentDescription="Attendee logo"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Attendee"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.Clay.HeadlineMedium"
+            android:letterSpacing="0.04" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="DeKUT Attendance System"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.Clay.BodyMedium"
+            android:alpha="0.8" />
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/BrandAccent" />
+
+    </LinearLayout>
+
+    <!-- ── Scrollable Form Card ── -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Clay card centered on clay_background -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Clay.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome back"
+                        android:textColor="@color/clay_on_surface"
+                        android:textAppearance="@style/TextAppearance.Clay.HeadlineMedium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Sign in to your account"
+                        android:textColor="@color/clay_on_surface_variant"
+                        android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+                    <!-- Registration Number -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmail"
+                        style="@style/Widget.Clay.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:hint="Registration Number"
+                        app:startIconDrawable="@drawable/ic_badge_outlined"
+                        app:startIconTint="@color/clay_primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            style="@style/Widget.Clay.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Password -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPassword"
+                        style="@style/Widget.Clay.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:hint="Password"
+                        app:startIconDrawable="@drawable/ic_lock_outlined"
+                        app:endIconMode="password_toggle"
+                        app:startIconTint="@color/clay_primary"
+                        app:endIconTint="@color/clay_primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            style="@style/Widget.Clay.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Remember Me + Forgot Password row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/cbRememberMe"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Remember me"
+                            android:textColor="@color/clay_on_surface"
+                            android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+                        <TextView
+                            android:id="@+id/tvForgotPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Forgot password?"
+                            android:textColor="@color/clay_primary"
+                            android:textAppearance="@style/TextAppearance.Clay.BodyMedium"
+                            android:textStyle="bold"
+                            android:padding="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Sign In Button -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLogin"
+                            style="@style/Widget.Clay.Button.Primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:text="SIGN IN"
+                            android:textAppearance="@style/TextAppearance.Clay.LabelLarge" />
+
+                        <ProgressBar
+                            android:id="@+id/progressLogin"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:indeterminateTint="@color/white" />
+
+                    </FrameLayout>
+
+                    <!-- Biometric Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLoginBiometric"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:text="Sign in with Biometrics"
+                        android:textColor="@color/clay_primary"
+                        android:textAppearance="@style/TextAppearance.Clay.BodyMedium"
+                        android:textStyle="bold"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_fingerprint"
+                        app:iconTint="@color/clay_primary"
+                        app:strokeColor="@color/clay_primary"
+                        app:strokeWidth="1.5dp" />
+
+                    <TextView
+                        android:id="@+id/tvGoToRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Create a student account →"
+                        android:textColor="@color/clay_primary"
+                        android:textAppearance="@style/TextAppearance.Clay.BodyMedium"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <View android:layout_width="match_parent" android:layout_height="32dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

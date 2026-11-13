@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clay_background"
+    android:orientation="vertical">
+
+    <!-- Search + filter clay card -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Clay.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="8dp">
+
+            <!-- Clay search bar (Widget.Clay.TextInputLayout) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSearchHistory"
+                style="@style/Widget.Clay.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:hint="Search courses or lecturers..."
+                app:startIconDrawable="@android:drawable/ic_menu_search"
+                app:startIconTint="@color/clay_on_surface_variant">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearchHistory"
+                    style="@style/Widget.Clay.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/clay_outline"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="8dp" />
+
+            <!-- Filter chips: All / Present / Late / Missed (Widget.Clay.Chip) -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginHorizontal="8dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupFilters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="4dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAll"
+                        style="@style/Widget.Clay.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All"
+                        android:checked="true" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPresent"
+                        style="@style/Widget.Clay.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Present" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLate"
+                        style="@style/Widget.Clay.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Late" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipMissed"
+                        style="@style/Widget.Clay.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Missed" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Attendance history list (clay card items via item_attendance_history.xml) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAttendanceHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp" />
+
+            <!-- Empty state: centered icon, message -->
+            <LinearLayout
+                android:id="@+id/tvEmptyHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_history_outlined"
+                    android:contentDescription="No records"
+                    app:tint="@color/clay_on_surface_variant" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="No attendance records found"
+                    android:textColor="@color/clay_on_surface_variant"
+                    android:textAppearance="@style/TextAppearance.Clay.BodyLarge"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Try changing your search or filter"
+                    android:textColor="@color/clay_on_surface_variant"
+                    android:textAppearance="@style/TextAppearance.Clay.BodyMedium"
+                    android:gravity="center"
+                    android:alpha="0.7" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

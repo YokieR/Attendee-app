@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshAttendance"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clay_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark Attendance"
+                android:textColor="@color/clay_on_surface"
+                android:textAppearance="@style/TextAppearance.Clay.HeadlineMedium" />
+
+            <!-- Session details clay card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSessionDetails"
+                style="@style/Widget.Clay.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvCourseName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Database Systems"
+                        android:textColor="@color/clay_on_surface"
+                        android:textAppearance="@style/TextAppearance.Clay.TitleLarge" />
+
+                    <TextView
+                        android:id="@+id/tvCourseCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CIT 4101"
+                        android:textColor="@color/clay_on_surface_variant"
+                        android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/clay_outline" />
+
+                    <TextView
+                        android:id="@+id/tvLecturer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lecturer: Mr. Samuel Muchina"
+                        android:textColor="@color/clay_on_surface"
+                        android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+                    <TextView
+                        android:id="@+id/tvVenue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Venue: Computer Lab 2"
+                        android:textColor="@color/clay_on_surface"
+                        android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Time: 08:00 AM - 10:00 AM"
+                        android:textColor="@color/clay_on_surface"
+                        android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Verification progress clay card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Clay.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutVerificationSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verification Process"
+                        android:textColor="@color/clay_on_surface_variant"
+                        android:textAppearance="@style/TextAppearance.Clay.TitleMedium" />
+
+                    <!-- Step: Device -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivStepDevice"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_check_circle_outlined"
+                            android:contentDescription="Device verification status"
+                            app:tint="@color/clay_on_surface_variant" />
+
+                        <TextView
+                            android:id="@+id/tvStepDevice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Verifying registered device..."
+                            android:textColor="@color/clay_on_surface"
+                            android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+                    </LinearLayout>
+
+                    <!-- Step: Wi-Fi (displayed in clay card) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivStepWifi"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_check_circle_outlined"
+                            android:contentDescription="Wi-Fi verification status"
+                            app:tint="@color/clay_on_surface_variant" />
+
+                        <TextView
+                            android:id="@+id/tvStepWifi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Verifying Wi-Fi connection..."
+                            android:textColor="@color/clay_on_surface"
+                            android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+                    </LinearLayout>
+
+                    <!-- Step: GPS/Location (displayed in clay card) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivStepGps"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_check_circle_outlined"
+                            android:contentDescription="GPS verification status"
+                            app:tint="@color/clay_on_surface_variant" />
+
+                        <TextView
+                            android:id="@+id/tvStepGps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Verifying location..."
+                            android:textColor="@color/clay_on_surface"
+                            android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+                    </LinearLayout>
+
+                    <!-- Step: Submission -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivStepSubmit"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_check_circle_outlined"
+                            android:contentDescription="Submission status"
+                            app:tint="@color/clay_on_surface_variant" />
+
+                        <TextView
+                            android:id="@+id/tvStepSubmit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Submitting attendance..."
+                            android:textColor="@color/clay_on_surface"
+                            android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Primary action button: confirm attendance -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMarkAttendance"
+                style="@style/Widget.Clay.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:text="MARK ATTENDANCE" />
+
+            <TextView
+                android:id="@+id/tvNoSessionMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="No Active Attendance Session\n\nThere are currently no attendance sessions available for you."
+                android:textColor="@color/clay_on_surface_variant"
+                android:textAppearance="@style/TextAppearance.Clay.BodyLarge"
+                android:visibility="gone" />
+
+            <!-- Success/Error feedback area (status chip pattern) -->
+            <LinearLayout
+                android:id="@+id/layoutResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivResultIcon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_check_circle_outlined"
+                    android:contentDescription="Result icon"
+                    app:tint="@color/clay_success" />
+
+                <TextView
+                    android:id="@+id/tvResultTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Attendance Recorded"
+                    android:textColor="@color/clay_on_surface"
+                    android:textAppearance="@style/TextAppearance.Clay.TitleLarge" />
+
+                <TextView
+                    android:id="@+id/tvResultMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Your attendance has been successfully recorded."
+                    android:textColor="@color/clay_on_surface_variant"
+                    android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnViewHistory"
+                    style="@style/Widget.Clay.Button.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="24dp"
+                    android:text="VIEW HISTORY" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBackToDashboard"
+                    style="@style/Widget.Clay.Button.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp"
+                    android:text="BACK TO DASHBOARD" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
