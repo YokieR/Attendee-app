@@ -194,19 +194,13 @@
                     <!-- Biometric Button -->
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnLoginBiometric"
-                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        style="@style/Widget.Clay.Button.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginTop="12dp"
                         android:text="Sign in with Biometrics"
-                        android:textColor="@color/clay_primary"
                         android:textAppearance="@style/TextAppearance.Clay.BodyMedium"
-                        android:textStyle="bold"
-                        app:cornerRadius="16dp"
-                        app:icon="@drawable/ic_fingerprint"
-                        app:iconTint="@color/clay_primary"
-                        app:strokeColor="@color/clay_primary"
-                        app:strokeWidth="1.5dp" />
+                        app:icon="@drawable/ic_fingerprint" />
 
                     <TextView
                         android:id="@+id/tvGoToRegister"
