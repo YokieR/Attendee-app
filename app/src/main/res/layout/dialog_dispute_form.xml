@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Dispute Form Dialog — Student
+  Uses Widget.Clay.TextInputLayout + ExposedDropdownMenu pattern throughout.
+  Spinner widgets replaced with AutoCompleteTextView for Material 3 / clay styling.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Session selector -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSessionSelector"
+        style="@style/Widget.Clay.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Select Attendance Session">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerSessions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Problem type selector -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilProblemType"
+        style="@style/Widget.Clay.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Problem Type">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerProblemType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Description field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Describe your problem"
+        style="@style/Widget.Clay.TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDisputeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:textAppearance="@style/TextAppearance.Clay.BodyMedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
